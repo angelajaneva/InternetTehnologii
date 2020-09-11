@@ -6,48 +6,60 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>ArtWorks</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.name)
-        </dt>
+<style>
+    .transparent-bg {
+        background: rgb(211,211,211);
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.name)
-        </dd>
+    .size {
+        font-size: 17px;
+        margin: 0 0
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.img)
-        </dt>
+    hr {
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin: 15px
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.img)
-        </dd>
+    @@media only screen and (max-width: 600px) {
 
-        <dt>
-            @Html.DisplayNameFor(model => model.price)
-        </dt>
+        .test {
+            display: inline-block !important;
+        }
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.year)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.year)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("AddToCard", "Index","ShoppingCart", new { id = Model.Id }, null) |
-    @Html.ActionLink("Back to List", "Index")
+    .boxsizingBorder {
+        min-width: 100%
+    }
+</style>
 
 
-</p>
+<div class="container">
+    <div style="display:inline-flex;width:100%;background-position: center;background-repeat: no-repeat;background-size: cover; margin-top:25px" class="thumbnail test">
+
+        <div style="text-align:center">
+            <img src="@Url.Content(Model.img)" style="max-width: 400px; float:left">
+            @{ if (@ViewBag.error != null)
+                            {
+                <a href="@Url.Action("Index", "ShoppingCart", new { id = Model.Id })" class="btn btn-success btn-lg disabled" style="margin-bottom:10px; margin-top:10px">Already in the cart</a> }
+                            else
+                            {
+                <a href="@Url.Action("Index", "ShoppingCart", new { id = Model.Id })" class="btn btn-default btn-lg" style="margin-bottom:10px; margin-top:10px">Add to cart</a> } }
+        </div>
+        <div class="thumbnail img-responsive transparent-bg" style="width:100%;text-align:center;padding-top: 18px;">
+            <span class="text-info size">ArtWork: <b>@Model.name</b></span>
+
+
+            <hr />
+            <span class="text-info size">Price: <b>@Model.price</b> &euro;</span>
+            <hr />
+            <span class="text-info size">Year: <b>@Model.year</b> </span>
+            <hr />
+            <a href="@Url.Action("Index")" class="btn btn-default">Back to list</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-default">Edit ArtWork</a>}
+        </div>
+    </div>
+   

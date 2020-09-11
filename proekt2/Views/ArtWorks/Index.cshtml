@@ -4,54 +4,86 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <style>
+        .img-responsive {
+            width: auto;
+            height: 250px;
+        }
+
+        .center-block {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .inline {
+            display: inline
+        }
+
+        .btn-danger {
+            margin: 5px;
+        }
+
+        .myLabel {
+            font-size: 17px;
+            color: dimgray;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 7px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .br {
+            border-radius: 9px;
+        }
+
+        .buttoncolor {
+            color: darkred;
+        }
+
+        div.row a {
+            color: white;
+            background-color: indianred;
+            border: none;
+        }
+
+        .tales {
+            width: 100%;
+        }
+
+      
+    </style>
+
+
+<h2>Shop art works</h2>
+
+
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.img)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.year)
-        </th>
-        <th></th>
-    </tr>
+    
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            <img src="@item.img" class="img-responsive inline " />
+    <div class="row">
 
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.year)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+        @foreach (var item in Model)
+        {
+    <div class="col-lg-3 col-md-6 col-xs-12 text-center ">
+        <div style="width:100%; margin-top:20px;  background: rgb(211,211,211)" class="table-bordered br">
+            <div class="myLabel" style="">
+                <label class="text-info" style="color:dimgrey">@item.name</label>
+            </div>
 
-            @if (User.IsInRole("Admin"))
-            {
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            <div class="text-center ">
+                <img src="@item.img" class="img-responsive inline " />
+            </div>
+            <label class="myLabel">Price: @item.price &euro;</label> <br />
 
-            }
-        </td>
-    </tr>
-}
+            @Html.ActionLink("View", "Details", new { id = item.Id }, new { @class = "btn btn-danger " })
+        </div>
+
+    </div>}
+
+
+
+    </div>
 
 </table>

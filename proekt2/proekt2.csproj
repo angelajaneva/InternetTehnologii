@@ -228,6 +228,12 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\images\background.jpg" />
+    <Content Include="Scripts\images\download.jpg" />
+    <Content Include="Scripts\images\image.jpg" />
+    <Content Include="Scripts\images\image3jpg.jpg" />
+    <Content Include="Scripts\images\image4.jpg" />
+    <Content Include="Scripts\images\WhistlersMother.jpg" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
