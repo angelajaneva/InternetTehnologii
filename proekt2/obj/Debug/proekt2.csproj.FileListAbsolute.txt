@@ -108,3 +108,13 @@ C:\Users\Klementina\source\repos\proekt2\proekt2\obj\Debug\proekt2.dll
 C:\Users\Klementina\source\repos\proekt2\proekt2\obj\Debug\proekt2.pdb
 C:\Users\Klementina\source\repos\proekt2\proekt2\obj\Debug\proekt2.Migrations.init.resources
 C:\Users\Klementina\source\repos\proekt2\proekt2\obj\Debug\proekt2.csproj.GenerateResource.cache
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\Stripe.net.dll
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\Stripe.net.pdb
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\Stripe.net.xml
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Klementina\source\repos\proekt2\proekt2\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Klementina\source\repos\proekt2\proekt2\obj\Debug\proekt2.Migrations.ChargeDTO.resources

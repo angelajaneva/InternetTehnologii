@@ -36,6 +36,7 @@ namespace proekt2.Controllers
             return View(artist);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Artists/Create
         public ActionResult Create()
         {

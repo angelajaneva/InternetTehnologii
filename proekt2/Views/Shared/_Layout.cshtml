@@ -17,15 +17,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("ShopArtWorks", "Index", "ArtWorks", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "Index", "ArtWorks")</li>
-                    <li>@Html.ActionLink("AddArtist", "Create", "Artists")</li>
-                    <li>@Html.ActionLink("AddArtWork", "Create", "ArtWorks")</li>
+                    <li>@Html.ActionLink("About", "Index", "Home")</li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Add Artist", "Create", "Artists")</li>
+                        <li>@Html.ActionLink("Add ArtWork", "Create", "ArtWorks")</li>
+                        <li>@Html.ActionLink("Add User To Role", "AddUserToRole", "Account")</li>
+                    }
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="@Url.Action("showCart", "ShoppingCart")" class="btn-danger" style="color:white">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                        </a>
+                    </li>
+                    @Html.Partial("_LoginPartial")
+
+                </ul>
+               
             </div>
         </div>
     </div>
@@ -40,5 +53,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderSection("stripe", required: false)
 </body>
 </html>

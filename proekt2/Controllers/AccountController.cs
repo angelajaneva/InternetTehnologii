@@ -52,6 +52,35 @@ namespace proekt2.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddUserToRole()
+        {
+            var model = new AddUserToRole();
+            model.roles.Add("Admin");
+            model.roles.Add("User");
+            model.roles.Add("Guest");
+            return View(model);
+        }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddUserToRole(AddUserToRole model)
+        {
+            try
+            {
+                var user = UserManager.FindByEmail(model.Email);
+                UserManager.AddToRole(user.Id, model.SelectedRole);
+                return RedirectToAction("Index", "ArtWorks");
+            }
+            catch (Exception ex)
+            {
+                return HttpNotFound();
+            }
+        }
+
+
+
+
+
         //
         // GET: /Account/Login
         [AllowAnonymous]

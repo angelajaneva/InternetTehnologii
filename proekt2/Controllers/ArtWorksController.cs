@@ -38,7 +38,7 @@ namespace proekt2.Controllers
 
       
         // GET: ArtWorks/Create
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             var model = db.Artists.ToList();
@@ -66,6 +66,7 @@ namespace proekt2.Controllers
         }
 
         // GET: ArtWorks/Edit/5
+
         public ActionResult Edit(int? id)
         {
             if (id == null)
