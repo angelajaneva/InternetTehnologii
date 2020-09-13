@@ -3,12 +3,20 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<style>
+    .font{
+        color:rgb(235, 235, 235);
+        padding: 10px
+    }
+</style>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal font", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
+    <p style="color: rgb(235, 235, 235)">
+    We've worked hard to bring the best collection of prints from the world's most respected artists and institutions.
+    Browse some of our favourite categories or jump straight into the full collection to find the perfect piece.
+</p>
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">

@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\proekt2",
+    "\\proekt2\\Models",
+    "\\proekt2\\Views"
   ],
   "SelectedNode": "\\proekt2.sln",
   "PreviewInSolutionExplorer": false

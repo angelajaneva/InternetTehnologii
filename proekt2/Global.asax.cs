@@ -20,5 +20,6 @@ namespace proekt2
             BundleConfig.RegisterBundles(BundleTable.Bundles);
       
         }
+
     }
 }

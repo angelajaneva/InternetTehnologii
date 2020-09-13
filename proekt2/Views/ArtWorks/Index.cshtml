@@ -5,82 +5,80 @@
 }
 
 
-    <style>
-        .img-responsive {
-            width: auto;
-            height: 250px;
-        }
+<style>
+    .img-responsive {
+        width: auto;
+        height: 250px;
+    }
 
-        .center-block {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .center-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        .inline {
-            display: inline
-        }
+    .inline {
+        display: inline
+    }
 
-        .btn-danger {
-            margin: 5px;
-        }
+    .btn-danger {
+        margin: 5px;
+    }
 
-        .myLabel {
-            font-size: 17px;
-            color: dimgray;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 7px;
-            padding: 5px;
-            margin: 5px;
-        }
+    .myLabel {
+        font-size: 17px;
+        color: dimgray;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 7px;
+        padding: 5px;
+        margin: 5px;
+    }
 
-        .br {
-            border-radius: 9px;
-        }
+    .br {
+        border-radius: 9px;
+    }
 
-        .buttoncolor {
-            color: darkred;
-        }
+    .buttoncolor {
+        color: darkred;
+    }
 
-        div.row a {
-            color: white;
-            background-color: indianred;
-            border: none;
-        }
+    div.row a {
+        color: white;
+        background-color: indianred;
+        border: none;
+    }
 
-        .tales {
-            width: 100%;
-        }
-
-      
-    </style>
+    .tales {
+        width: 100%;
+    }
+</style>
 
 
 <h2>Shop art works</h2>
 
 
 <table class="table">
-    
+
 
     <div class="row">
 
         @foreach (var item in Model)
         {
-    <div class="col-lg-3 col-md-6 col-xs-12 text-center ">
-        <div style="width:100%; margin-top:20px;  background: rgb(211,211,211)" class="table-bordered br">
-            <div class="myLabel" style="">
-                <label class="text-info" style="color:dimgrey">@item.name</label>
-            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12 text-center ">
+                <div style="width:100%; margin-top:20px;  background: rgb(211,211,211)" class="table-bordered br">
+                    <div class="myLabel" style="">
+                        <label class="text-info" style="color:dimgrey">@item.name</label>
+                    </div>
 
-            <div class="text-center ">
-                <img src="@item.img" class="img-responsive inline " />
-            </div>
-            <label class="myLabel">Price: @item.price &euro;</label> <br />
+                    <div class="text-center ">
+                        <img src="@item.img" class="img-responsive inline " />
+                    </div>
+                    <label class="myLabel">Price: @item.price &euro;</label> <br />
 
-            @Html.ActionLink("View", "Details", new { id = item.Id }, new { @class = "btn btn-danger " })
-        </div>
+                    @Html.ActionLink("View", "Details", new { id = item.Id }, new { @class = "btn btn-danger " })
+                </div>
 
-    </div>}
+            </div>}
 
 
 
