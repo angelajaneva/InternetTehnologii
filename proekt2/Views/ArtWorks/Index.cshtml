@@ -51,21 +51,49 @@
     .tales {
         width: 100%;
     }
+
+
+    .my-font {
+        color: darkgray;
+        padding: 1em 0em 0.5em 0em
+    }
+
+    .my-dropdown {
+        font-size: 20px;
+        color: dimgray;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 7px;
+        padding: 0.7em 7.5em 0.7em 1.5em;
+        background-color: rgb(245, 245, 245);
+        margin: 5px;
+    }
 </style>
 
+<div>
+    <h2 class="my-font">
+        Browse art prints, <br /> posters, framed art
+    </h2>
+    <div class="dropdown pull-right">
+        <a class="dropdown-toggle my-dropdown" data-toggle="dropdown" href="#">Sort by<span class="caret"></span></a>
 
-<h2>Shop art works</h2>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Artist", "Index", new { sortOrder = ViewBag.ArtistSortParm })</li>
 
+            <li>@Html.ActionLink("Price (Lowest)", "Index", new { sortOrder = ViewBag.PriceSortParm })</li>
+
+            <li>@Html.ActionLink("Price (Highest)", "Index", new { sortOrder = ViewBag.PriceDescSortParm })</li>
+
+        </ul>
+    </div>
+</div>
+<br /><br />
 
 <table class="table">
-
-
     <div class="row">
-
         @foreach (var item in Model)
         {
             <div class="col-lg-3 col-md-6 col-xs-12 text-center ">
-                <div style="width:100%; margin-top:20px;  background: rgb(211,211,211)" class="table-bordered br">
+                <div style="width:100%; margin-top:20px;  background: rgb(245,245,245)" class="table-bordered br">
                     <div class="myLabel" style="">
                         <label class="text-info" style="color:dimgrey">@item.name</label>
                     </div>

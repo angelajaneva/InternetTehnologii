@@ -16,9 +16,30 @@ namespace proekt2.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ArtWorks
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.ArtWorks.ToList());
+            ViewBag.ArtistSortParm = String.IsNullOrEmpty(sortOrder) ? "artist" : "";
+            ViewBag.PriceSortParm = "price";
+            ViewBag.PriceDescSortParm = "price_desc";
+
+            //   ViewBag.PriceSortParm = sortOrder == "price" ? "price" : "price_desc";
+
+            var artworks = from a in db.ArtWorks
+                           select a;
+
+            if (sortOrder == "price_desc")
+                return View(db.ArtWorks.ToList().OrderByDescending(a => a.price));
+           
+
+            if (sortOrder == "price")
+                return View(db.ArtWorks.ToList().OrderBy(a => a.price));
+
+            if (sortOrder == "artist")
+                return View(db.ArtWorks.ToList().OrderBy(a => a.artist));
+
+            else
+                return View(db.ArtWorks.ToList());
+      
         }
 
         // GET: ArtWorks/Details/5
