@@ -24,9 +24,6 @@ namespace proekt2.Controllers
 
             //   ViewBag.PriceSortParm = sortOrder == "price" ? "price" : "price_desc";
 
-            var artworks = from a in db.ArtWorks
-                           select a;
-
             if (sortOrder == "price_desc")
                 return View(db.ArtWorks.ToList().OrderByDescending(a => a.price));
            
@@ -35,7 +32,7 @@ namespace proekt2.Controllers
                 return View(db.ArtWorks.ToList().OrderBy(a => a.price));
 
             if (sortOrder == "artist")
-                return View(db.ArtWorks.ToList().OrderBy(a => a.artist));
+                return View(db.ArtWorks.ToList().OrderBy(a => a.artist_id));
 
             else
                 return View(db.ArtWorks.ToList());

@@ -238,3 +238,6 @@ C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.csproj.Core
 C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.csproj.CopyComplete
 C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.dll
 C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.pdb
+C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.Migrations.AuthorsonArtworks.resources
+C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.Migrations.AuthorsonArtworks2.resources
+C:\Users\Angela\Desktop\InternetTehnologii\proekt2\obj\Debug\proekt2.Migrations.Author.resources

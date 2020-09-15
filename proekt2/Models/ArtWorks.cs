@@ -11,12 +11,11 @@ namespace proekt.Models
         [Key]
         public int Id { get; set; }
         public String name { get; set; }
-
         public String img { get; set; }
         public int price { get; set; }
         public int year { get; set; }
-
-        public Artist artist { get; set; }
+        public int artist_id { get; set; }
+        public virtual Artist artist { get; set; }
 
         
 

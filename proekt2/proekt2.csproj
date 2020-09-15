@@ -204,6 +204,18 @@
     <Compile Include="Migrations\202009102345523_ChargeDTO.designer.cs">
       <DependentUpon>202009102345523_ChargeDTO.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009151638145_Authors on Artworks.cs" />
+    <Compile Include="Migrations\202009151638145_Authors on Artworks.designer.cs">
+      <DependentUpon>202009151638145_Authors on Artworks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009151649447_Authors on Artworks2.cs" />
+    <Compile Include="Migrations\202009151649447_Authors on Artworks2.designer.cs">
+      <DependentUpon>202009151649447_Authors on Artworks2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009151700345_Author.cs" />
+    <Compile Include="Migrations\202009151700345_Author.designer.cs">
+      <DependentUpon>202009151700345_Author.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddUserToRole.cs" />
@@ -556,6 +568,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009102345523_ChargeDTO.resx">
       <DependentUpon>202009102345523_ChargeDTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009151638145_Authors on Artworks.resx">
+      <DependentUpon>202009151638145_Authors on Artworks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009151649447_Authors on Artworks2.resx">
+      <DependentUpon>202009151649447_Authors on Artworks2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009151700345_Author.resx">
+      <DependentUpon>202009151700345_Author.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
