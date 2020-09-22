@@ -107,7 +107,9 @@
                     <div class="text-center ">
                         <img src="@item.img" class="img-responsive inline " />
                     </div>
-                    <label class="label-font">Artwork by: @item.artist.name</label>
+                    <label class="label-font">Artwork by: </label>
+                    @Html.ActionLink(item.artist.name, "Details", "Artists", new { id = item.artist.Id },null);
+
                     <label class="myLabel">Price: @item.price &euro;</label> <br />
 
                     @Html.ActionLink("View", "Details", new { id = item.Id }, new { @class = "btn btn-danger " })

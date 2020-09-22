@@ -12,5 +12,8 @@ namespace proekt.Models
         public int Id { get; set; }
         public String name { get; set; }
         public String country { get; set; }
+
+        public String biography { get; set; }
+
     }
 }
