@@ -29,6 +29,7 @@ namespace proekt2.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Artist artist = db.Artists.Find(id);
+            ViewBag.Name = artist.name;
             if (artist == null)
             {
                 return HttpNotFound();

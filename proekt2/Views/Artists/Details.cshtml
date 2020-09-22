@@ -4,35 +4,44 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<style>
+    .my-font {
+        color: rgb(245,245,245)
+    }
+</style>
 
-<div>
-    <h4>Artist</h4>
-    <hr />
+<br />
+<h4 class="my-font">Here is biography for artist @ViewBag.Name</h4>
+<br />
+<div style="" class="my-font">
+
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.name)
+        <dt class="text-center">
+            @Html.Label("Name: ")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.name)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.country)
+        <dt class="text-center">
+            @Html.Label("Country: ")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.country)
         </dd>
 
+        <dt class="text-center">
+            @Html.Label("Biography: ")
+        </dt>
+
         <dd>
-            @Html.DisplayFor(model=>model.biography)
+            @Html.DisplayFor(model => model.biography)
         </dd>
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+<p class="my-font">
+    @Html.ActionLink("List of artists", "Index") |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
 </p>

@@ -48,6 +48,11 @@
         border: none;
     }
 
+    div.row span a {
+        color: dimgray;
+        background-color: rgb(245,245,245);
+    }
+
     .tales {
         width: 100%;
     }
@@ -72,7 +77,6 @@
         color: dimgray;
         padding: 0.5em 0em 0.5em 0em
     }
-
 </style>
 
 <div>
@@ -92,7 +96,8 @@
         </ul>
     </div>
 </div>
-<br /><br />
+<br />
+<br />
 
 <table class="table">
     <div class="row">
@@ -108,8 +113,9 @@
                         <img src="@item.img" class="img-responsive inline " />
                     </div>
                     <label class="label-font">Artwork by: </label>
-                    @Html.ActionLink(item.artist.name, "Details", "Artists", new { id = item.artist.Id },null);
-
+                    <span>
+                        @Html.ActionLink(item.artist.name, "Details", "Artists", new { id = item.artist.Id }, new { @class = "" })
+                    </span>
                     <label class="myLabel">Price: @item.price &euro;</label> <br />
 
                     @Html.ActionLink("View", "Details", new { id = item.Id }, new { @class = "btn btn-danger " })
